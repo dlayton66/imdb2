@@ -1,0 +1,9 @@
+<h1>Movies Index<h1>
+<% @movies.each do |movie| %>
+  <h3><%= "#{movie.title}" %></h3>
+  <p><%= "Runtime: #{movie.runtime}" %></p>
+  <p><%= "Year Released: #{movie.release}" %></p>
+  <p><%= "Like: #{movie.like}" %> </p>
+  <p><%= "Domestic Gross: #{movie.dmst_gross}" %> </p>
+  <p><%= "International Gross: #{movie.intl_gross}" %></p>
+<% end %>

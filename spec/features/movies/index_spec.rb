@@ -27,18 +27,17 @@ RSpec.describe "Movies Index" do
                                             like: true,
                                             dmst_gross: 21198205,
                                             intl_gross: 47779793)
-                                            require 'pry'; binding.pry
 
         visit "/movies"
 
-        expect(page).to have_content("Title: #{movie_1.title}")
+        expect(page).to have_content("#{movie_1.title}")
         expect(page).to have_content("Runtime: #{movie_1.runtime}")
         expect(page).to have_content("Year Released: #{movie_1.release}")
         expect(page).to have_content("Like: #{movie_1.like}")
         expect(page).to have_content("Domestic Gross: #{movie_1.dmst_gross}")
         expect(page).to have_content("International Gross: #{movie_1.intl_gross}")
 
-        expect(page).to have_content("Title: #{movie_2.title}")
+        expect(page).to have_content("#{movie_2.title}")
         expect(page).to have_content("Runtime: #{movie_2.runtime}")
         expect(page).to have_content("Year Released: #{movie_2.release}")
         expect(page).to have_content("Like: #{movie_2.like}")
