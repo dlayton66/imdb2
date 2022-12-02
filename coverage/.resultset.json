@@ -264,26 +264,8 @@
           1,
           null
         ]
-      },
-      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/models/movie_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/jruelappy/turing/mod2/solo/imdb2/app/models/movie.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1669933091
+    "timestamp": 1669943112
   }
 }
