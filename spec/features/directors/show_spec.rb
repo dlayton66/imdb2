@@ -14,13 +14,15 @@ RSpec.describe "Directors Index" do
       age: 52)
   end
 
-  describe "User Story 1" do
-    describe "User visits '/directors'" do
-      it "shows the name of every director" do
-        visit "/directors"
+  describe "User Story 2" do
+    describe "User visits '/directors/:id'" do
+      it "shows the attributes for that director" do
+        director_id = Director.find_by(firstname: "Stanley", lastname: "Kubrick").id
+        visit "/directors/#{director_id}"
 
         expect(page).to have_content("Stanley Kubrick")
-        expect(page).to have_content("Paul Thomas Anderson")
+        expect(page).to have_content("Alive: false")
+        expect(page).to have_content("Age: 70")
       end
     end
   end
