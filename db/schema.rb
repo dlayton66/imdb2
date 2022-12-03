@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_01_212512) do
+ActiveRecord::Schema.define(version: 2022_12_02_004933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "directors", force: :cascade do |t|
     t.string "firstname"
-    t.string "surname"
+    t.string "lastname"
     t.boolean "alive"
     t.integer "age"
     t.datetime "created_at", null: false

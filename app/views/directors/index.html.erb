@@ -1,0 +1,5 @@
+<h1>Directors</h1>
+<% @directors.each do |director| %>
+  <h4><%= "#{director.firstname} #{director.lastname}" %></h4>
+  <p><%= "Created at: #{director.created_at}" %>
+<% end %>
