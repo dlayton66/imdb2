@@ -23,32 +23,40 @@ RSpec.describe "Director Movies Index" do
                                             dmst_gross: 60_481_243,
                                             intl_gross: 5_400_507)
           
-        # director_2 = Director.create!(firstname: "Paul Thomas",
-        #                               lastname: "Anderson",
-        #                               alive: true,
-        #                               age: 52)
+        director_2 = Director.create!(firstname: "Paul Thomas",
+                                      lastname: "Anderson",
+                                      alive: true,
+                                      age: 52)
 
-        # movie_2 = director_2.movies.create!(title: "Phantom Thread",
-        #                                     runtime: 130,
-        #                                     release: '2017-12-25',
-        #                                     like: true,
-        #                                     dmst_gross: 21_198_205,
-        #                                     intl_gross: 47_779_793)
+        movie_2 = director_2.movies.create!(title: "Phantom Thread",
+                                            runtime: 130,
+                                            release: '2017-12-25',
+                                            like: true,
+                                            dmst_gross: 21_198_205,
+                                            intl_gross: 47_779_793)
 
-        # movie_4 = director_2.movies.create!(title: "There Will Be Blood",
-        #                                     runtime: 158,
-        #                                     release: '2007-12-26',
-        #                                     like: true,
-        #                                     dmst_gross: 40_222_514,
-        #                                     intl_gross: 35_959_874)
+        movie_4 = director_2.movies.create!(title: "There Will Be Blood",
+                                            runtime: 158,
+                                            release: '2007-12-26',
+                                            like: true,
+                                            dmst_gross: 40_222_514,
+                                            intl_gross: 35_959_874)
 
         visit "/directors/#{director_1.id}/movies"
+
+        expect(page).to have_content("#{director_1.firstname} #{director_1.lastname}")
+
         attributes = [:title, :runtime, :release, :like, :dmst_gross, :intl_gross]
-
-        expect(page).to have_content("Stanley Kubrick")
-
         attributes.each do |att|
           expect(page).to have_content(movie_1[att])
+        end
+
+        visit "/directors/#{director_2.id}/movies"
+
+        expect(page).to have_content("#{director_2.firstname} #{director_2.lastname}")
+
+        attributes.each do |att|
+          expect(page).to have_content(movie_2[att])
         end
       end
     end
