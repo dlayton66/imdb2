@@ -258,18 +258,236 @@
           null
         ]
       },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/features/directors/movies/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          6,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/features/directors/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/features/movies/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/features/movies/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/models/director_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/jruelappy/turing/mod2/solo/imdb2/app/models/director.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          4,
+          5,
           null,
           null
         ]
       },
       "/Users/jruelappy/turing/mod2/solo/imdb2/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/spec/models/movie_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/app/models/movie.rb": {
         "lines": [
           1,
           1,
@@ -284,7 +502,7 @@
           null,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
@@ -294,8 +512,31 @@
           1,
           null
         ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/app/controllers/director_movies_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/jruelappy/turing/mod2/solo/imdb2/app/controllers/movies_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1670043491
+    "timestamp": 1670043927
   }
 }
