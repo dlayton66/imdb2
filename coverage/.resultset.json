@@ -262,6 +262,10 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          4,
+          null,
           null
         ]
       },
@@ -272,19 +276,15 @@
           null
         ]
       },
-      "/Users/jruelappy/turing/mod2/solo/imdb2/app/models/movie.rb": {
+      "/Users/jruelappy/turing/mod2/solo/imdb2/app/controllers/directors_controller.rb": {
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/Users/jruelappy/turing/mod2/solo/imdb2/app/controllers/director_movies_controller.rb": {
-        "lines": [
+          3,
+          null,
+          null,
           1,
-          1,
-          2,
-          2,
+          0,
           null,
           null
         ]
@@ -296,6 +296,6 @@
         ]
       }
     },
-    "timestamp": 1670033857
+    "timestamp": 1670043491
   }
 }
