@@ -2,4 +2,4 @@
 <p><%= "Alive: #{@director.alive}" %></p>
 <p><%= "Age: #{@director.age}" %></p>
 <p><%= "id: #{@director.id}" %></p>
-<p><%= "Number of movies: #{@director.movies.count}" %></p>
+<p><a href= "/directors/<%=@director.id.to_s%>/movies"><%= "Number of movies: #{@director.movies.count}" %></a></p>
