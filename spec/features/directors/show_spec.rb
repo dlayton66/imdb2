@@ -1,31 +1,11 @@
-require "rails_helper"
+require 'rails_helper'
+require 'test_helper'
 
 RSpec.describe "Directors Index" do
 
   before :each do
-    @director_1 = Director.create!(firstname: "Stanley",
-      lastname: "Kubrick",
-      alive: false,
-      age: 70)
-
-    @movie_1 = @director_1.movies.create!(title: "Eyes Wide Shut",
-      runtime: 159,
-      release: '1999-07-16',
-      like: true,
-      dmst_gross: 55_691_208,
-      intl_gross: 106_551_476)
-
-    @movie_3 = @director_1.movies.create!(title: "2001: A Space Odyssey",
-            runtime: 149,
-            release: '1968-04-03',
-            like: true,
-            dmst_gross: 60_481_243,
-            intl_gross: 5_400_507)
-      
-    @director_2 = Director.create!(firstname: "Paul Thomas",
-      lastname: "Anderson",
-      alive: true,
-      age: 52)
+    seed_kubrick
+    seed_pta
   end
 
   describe "User Story 2" do
