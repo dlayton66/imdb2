@@ -60,4 +60,26 @@ RSpec.describe "Directors Index" do
       end
     end
   end
+  # As a visitor
+  # When I visit the Parent Index page
+  # Then I see a link to create a new Parent record, "New Parent"
+  # When I click this link
+  # Then I am taken to '/parents/new' where I  see a form for a new parent record
+  # When I fill out the form with a new parent's attributes:
+  # And I click the button "Create Parent" to submit the form
+  # Then a `POST` request is sent to the '/parents' route,
+  # a new parent record is created,
+  # and I am redirected to the Parent Index page where I see the new Parent displayed.
+
+  describe "User Story 11" do
+    describe "User visits '/directors'" do
+      it "links to the create director page" do
+        visit "/directors"
+
+        click_on 'Create Director'
+
+        expect(current_path).to eq('/directors/new')
+      end
+    end
+  end
 end
