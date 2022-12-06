@@ -1,5 +1,6 @@
 <h1><%= "#{@director.firstname} #{@director.lastname}" %></h1>
 <%= link_to "Edit Director", "/directors/#{@director.id}/edit" %>
+<%= link_to "Delete Director", "/directors/#{@director.id}", method: :delete %>
 <p><%= "Alive: #{@director.alive}" %></p>
 <p><%= "Age: #{@director.age}" %></p>
 <p><%= "id: #{@director.id}" %></p>

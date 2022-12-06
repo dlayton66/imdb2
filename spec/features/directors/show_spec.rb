@@ -40,17 +40,13 @@ RSpec.describe "Directors Index" do
   describe "User Story 10" do
     describe "User visits '/directors/:id'" do
       it "has a link to that director's movies index page" do
-        director_id = Director.find_by(firstname: @director_1.firstname, 
-                                       lastname: @director_1.lastname).id
-        visit "/directors/#{director_id}"
+        visit "/directors/#{@director_1.id}"
 
-        expect(page).to have_link(href: "/directors/#{director_id}/movies")
+        expect(page).to have_link(href: "/directors/#{@director_1.id}/movies")
 
-        director_id = Director.find_by(firstname: @director_2.firstname, 
-          lastname: @director_2.lastname).id
-        visit "/directors/#{director_id}"
+        visit "/directors/#{@director_2.id}"
 
-        expect(page).to have_link(href: "/directors/#{director_id}/movies")
+        expect(page).to have_link(href: "/directors/#{@director_2.id}/movies")
       end
     end
   end
