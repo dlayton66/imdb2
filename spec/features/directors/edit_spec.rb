@@ -15,7 +15,7 @@ RSpec.describe "Director Update" do
     end
 
     describe "User is redirected to '/directors/:id/edit" do
-      it 'allows the user to edit a director' do
+      it 'allows the user to edit the director' do
         director = Director.create!(
           firstname: 'Paul Thomas',
           lastname: 'Blanderson',
@@ -34,7 +34,7 @@ RSpec.describe "Director Update" do
 
         click_button "Update Director"
 
-        expect(current_path).to eq("/directors")
+        expect(current_path).to eq("/directors/#{director.id}")
         expect(page).to have_content('Paul Thomas Anderson')
       end
     end

@@ -23,7 +23,7 @@ class DirectorsController < ApplicationController
   def update
     director = Director.find(params[:id])
     director.update(director_params)
-    redirect_to "/directors"
+    redirect_to "/directors/#{director.id}"
   end
 
   private

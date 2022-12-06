@@ -1,0 +1,21 @@
+<%= form_with url: "/movies/#{@movie.id}", method: :patch, local: true do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title, value: @movie.title %>
+  <br>
+  <%= form.label :runtime %>
+  <%= form.text_field :runtime, value: @movie.runtime %>
+  <br>
+  <%= form.label :release %>
+  <%= form.text_field :release, value: @movie.title %>
+  <br>
+  <%= form.label :like %>
+  <%= form.text_field :like, value: @movie.like %>
+  <br>
+  <%= form.label :dmst_gross, 'Domestic Gross' %>
+  <%= form.text_field :dmst_gross, value: @movie.dmst_gross %>
+  <br>
+  <%= form.label :intl_gross, "International Gross" %>
+  <%= form.text_field :intl_gross, value: @movie.intl_gross %>
+  <br>
+  <%= form.submit 'Update Movie' %>
+<% end %>
