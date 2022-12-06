@@ -1,8 +1,8 @@
 <%= form_with url: '/directors', method: :post, local: true do |form| %>
-  <%= form.label 'First Name' %>
+  <%= form.label :firstname, 'First Name' %>
   <%= form.text_field :firstname %>
   <br>
-  <%= form.label 'Last Name' %>
+  <%= form.label :lastname, 'Last Name' %>
   <%= form.text_field :lastname %>
   <br>
   <%= form.label 'Age' %>

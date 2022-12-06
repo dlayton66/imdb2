@@ -1,0 +1,15 @@
+<%= form_with url: "/directors/#{@director.id}", method: :patch, local: true do |form| %>
+  <%= form.label :firstname, 'First Name' %>
+  <%= form.text_field :firstname, value: @director.firstname %>
+  <br>
+  <%= form.label :lastname, 'Last Name' %>
+  <%= form.text_field :lastname, value: @director.lastname %>
+  <br>
+  <%= form.label :age, 'Age' %>
+  <%= form.text_field :age, value: @director.age %>
+  <br>
+  <%= form.label :alive, 'Alive?' %>
+  <%= form.text_field :alive, value: @director.alive %>
+  <%= form.submit 'Update Director' %>
+<% end %>
+
