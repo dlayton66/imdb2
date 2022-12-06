@@ -47,14 +47,28 @@ RSpec.describe "Movies Index" do
     it 'adds a link to sort movies alphabetically' do
       visit "/movies"
       click_on "Sort Alphabetically"
+      
       expect(has_current_path?("/movies?sort=true")).to be true
     end
 
     it 'displays the movies alphabetically' do
       visit "/movies"
+
       expect("Eyes Wide Shut").to appear_before("2001: A Space Odyssey")
+
       click_on "Sort Alphabetically"
+
       expect("2001: A Space Odyssey").to appear_before("Eyes Wide Shut")
+    end
+  end
+
+  describe "User Story 18" do
+    it 'adds links to edit movies from index' do
+      visit "/movies"
+
+      expect(page).to have_link("Edit", href: "/movies/#{@movie_1.id}/edit")
+      expect(page).to have_link("Edit", href: "/movies/#{@movie_2.id}/edit")
+      expect(page).to have_link("Edit", href: "/movies/#{@movie_3.id}/edit")
     end
   end
 end

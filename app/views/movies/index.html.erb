@@ -4,6 +4,7 @@
 <% params[:sort] ? movies = @liked_ordered_movies : movies = @liked_movies %>
 <% movies.each do |movie| %>
   <h4><%= link_to "#{movie.title}", "/movies/#{movie.id}" %></h4>
+  <p><%= link_to "Edit", "/movies/#{movie.id}/edit" %>
   <p><%= "Runtime: #{movie.runtime}" %></p>
   <p><%= "Year Released: #{movie.release}" %></p>
   <p><%= "Like: #{movie.like}" %> </p>
