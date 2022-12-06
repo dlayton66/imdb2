@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
-    @liked_movies = Movie.where(like: true)
-    @liked_ordered_movies = Movie.where(like: true).order(:title)
+    @liked_movies = Movie.liked_movies
+    @liked_ordered_movies = Movie.liked_ordered_movies
   end
 
   def show
