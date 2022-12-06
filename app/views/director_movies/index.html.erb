@@ -1,5 +1,12 @@
 <h1><%= "#{@director.firstname} #{@director.lastname}" %></h1>
 <%= link_to "Create Movie", "/directors/#{@director.id}/movies/new" %>
+<%= form_with url: "/directors/#{@director.id}/movies?threshold=#{@threshold}", method: :get, local: true do |form| %>
+  <%= form.label :threshold, "Minimum Runtime" %>
+  <%= form.text_field :threshold %>
+  <br>
+  <%= form.submit "Show!" %>
+<% end %>
+<hr>
 <% @movies.each do |movie| %>
   <h3><%= "#{movie.title}" %></h3>
   <p><%= "Runtime: #{movie.runtime}" %></p>

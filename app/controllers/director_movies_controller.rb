@@ -1,7 +1,11 @@
 class DirectorMoviesController < ApplicationController
   def index
     @director = Director.find(params[:id])
-    @movies = @director.movies
+    if params[:threshold]
+      @movies = @director.movies.where("runtime >= #{params[:threshold]}")
+    else
+      @movies = @director.movies
+    end
   end
 
   def new
