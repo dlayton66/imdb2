@@ -1,6 +1,7 @@
-<h1>Directors</h1>
-<%= link_to 'Create Director', '/directors/new' %>
+<h1>Directors Index</h1>
+<h3><%= link_to 'Create Director', '/directors/new' %></h3>
+<hr>
 <% @directors.each do |director| %>
-  <h4><%= "#{director.firstname} #{director.lastname}" %></h4>
+  <h4><%= link_to "#{director.firstname} #{director.lastname}", "/directors/#{director.id}" %></h4>
   <p><%= "Created at: #{director.created_at}" %>
 <% end %>

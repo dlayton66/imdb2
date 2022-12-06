@@ -1,6 +1,6 @@
 <h1>Movies Index<h1>
 <% @liked_movies.each do |movie| %>
-  <h3><%= "#{movie.title}" %></h3>
+  <h3><%= link_to "#{movie.title}", "/movies/#{movie.id}" %></h3>
   <p><%= "Runtime: #{movie.runtime}" %></p>
   <p><%= "Year Released: #{movie.release}" %></p>
   <p><%= "Like: #{movie.like}" %> </p>
