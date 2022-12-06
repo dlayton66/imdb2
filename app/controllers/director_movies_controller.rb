@@ -11,6 +11,7 @@ class DirectorMoviesController < ApplicationController
   def create
     director = Director.find(params[:id])
     director.movies.create!(movie_params)
+    redirect_to "/directors/#{director.id}/movies"
   end
 
   private

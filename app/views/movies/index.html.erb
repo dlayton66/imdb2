@@ -1,5 +1,5 @@
 <h1>Movies Index<h1>
-<% @movies.each do |movie| %>
+<% @liked_movies.each do |movie| %>
   <h3><%= "#{movie.title}" %></h3>
   <p><%= "Runtime: #{movie.runtime}" %></p>
   <p><%= "Year Released: #{movie.release}" %></p>

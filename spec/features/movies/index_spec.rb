@@ -26,4 +26,21 @@ RSpec.describe "Movies Index" do
       end
     end
   end
+
+  describe "User Story 15" do
+    it 'only shows movies where like is true' do
+      seed_kubrick
+      seed_pta
+      seed_wood
+
+      visit "/movies"
+
+      expect(page).to have_content("#{@movie_1.title}")
+      expect(page).to have_content("#{@movie_2.title}")
+      expect(page).to have_content("#{@movie_3.title}")
+      expect(page).to have_content("#{@movie_4.title}")
+      expect(page).to_not have_content("#{@movie_5.title}")
+      expect(Movie.find_by(title: "Plan 9 from Outer Space")).to_not be(nil)
+    end
+  end
 end

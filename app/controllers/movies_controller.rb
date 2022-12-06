@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
+    @liked_movies = Movie.where(like: true)
   end
 
   def show
