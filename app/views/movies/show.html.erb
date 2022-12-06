@@ -1,5 +1,6 @@
 <h3><%= "#{@movie.title}" %></h3>
 <%= link_to "Edit Movie", "/movies/#{@movie.id}/edit" %>
+<%= link_to "Delete Movie", "/movies/#{@movie.id}", method: :delete %>
 <p><%= "Runtime: #{@movie.runtime}" %></p>
 <p><%= "Year Released: #{@movie.release}" %></p>
 <p><%= "Like: #{@movie.like}" %> </p>
