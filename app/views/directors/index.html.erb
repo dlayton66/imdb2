@@ -3,5 +3,6 @@
 <hr>
 <% @directors.each do |director| %>
   <h4><%= link_to "#{director.firstname} #{director.lastname}", "/directors/#{director.id}" %></h4>
+  <%= link_to "Edit", "/directors/#{director.id}/edit" %>
   <p><%= "Created at: #{director.created_at}" %>
 <% end %>

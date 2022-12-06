@@ -60,4 +60,13 @@ RSpec.describe "Directors Index" do
       end
     end
   end
+
+  describe "User Story 17" do
+    it 'adds links to edit directors from index' do
+      visit "/directors"
+      expect(page).to have_link("Edit", href: "/directors/#{@director_1.id}/edit")
+      expect(page).to have_link("Edit", href: "/directors/#{@director_2.id}/edit")
+      expect(page).to have_link("Edit", href: "/directors/#{@director_3.id}/edit")
+    end
+  end
 end
