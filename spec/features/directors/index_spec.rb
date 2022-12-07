@@ -71,7 +71,7 @@ RSpec.describe "Directors Index" do
   end
 
   describe "User Story 22" do
-    it 'adds links to delete directors from index' do
+    it 'adds links to delete directors from directors index' do
       visit "/directors"
 
       expect(page).to have_link("Delete", href: "/directors/#{@director_1.id}")
