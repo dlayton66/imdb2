@@ -1,0 +1,21 @@
+<%= form_with url: "/directors/#{@director.id}/movies", method: :post, local: true do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.label :runtime %>
+  <%= form.text_field :runtime %>
+  <br>
+  <%= form.label :release %>
+  <%= form.text_field :release %>
+  <br>
+  <%= form.label :like %>
+  <%= form.text_field :like %>
+  <br>
+  <%= form.label :dmst_gross, "Domestic Gross" %>
+  <%= form.text_field :dmst_gross %>
+  <br>
+  <%= form.label :intl_gross, "International Gross" %>
+  <%= form.text_field :intl_gross %>
+  <br>
+  <%= form.submit "Create Movie" %>
+<% end %>

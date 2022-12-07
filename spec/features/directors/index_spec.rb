@@ -60,4 +60,28 @@ RSpec.describe "Directors Index" do
       end
     end
   end
+
+  describe "User Story 17" do
+    it 'adds links to edit directors from index' do
+      visit "/directors"
+      expect(page).to have_link("Edit", href: "/directors/#{@director_1.id}/edit")
+      expect(page).to have_link("Edit", href: "/directors/#{@director_2.id}/edit")
+      expect(page).to have_link("Edit", href: "/directors/#{@director_3.id}/edit")
+    end
+  end
+
+  describe "User Story 22" do
+    it 'adds links to delete directors from directors index' do
+      visit "/directors"
+
+      expect(page).to have_link("Delete", href: "/directors/#{@director_1.id}")
+      expect(page).to have_link("Delete", href: "/directors/#{@director_2.id}")
+      expect(page).to have_link("Delete", href: "/directors/#{@director_3.id}")
+      expect(page).to have_content("#{@director_1.fullname}")
+      
+      first(:link, 'Delete').click
+
+      expect(page).to_not have_content("#{@director_1.fullname}")
+    end
+  end
 end

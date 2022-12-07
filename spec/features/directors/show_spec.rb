@@ -1,31 +1,11 @@
-require "rails_helper"
+require 'rails_helper'
+require 'test_helper'
 
 RSpec.describe "Directors Index" do
 
   before :each do
-    @director_1 = Director.create!(firstname: "Stanley",
-      lastname: "Kubrick",
-      alive: false,
-      age: 70)
-
-    @movie_1 = @director_1.movies.create!(title: "Eyes Wide Shut",
-      runtime: 159,
-      release: '1999-07-16',
-      like: true,
-      dmst_gross: 55_691_208,
-      intl_gross: 106_551_476)
-
-    @movie_3 = @director_1.movies.create!(title: "2001: A Space Odyssey",
-            runtime: 149,
-            release: '1968-04-03',
-            like: true,
-            dmst_gross: 60_481_243,
-            intl_gross: 5_400_507)
-      
-    @director_2 = Director.create!(firstname: "Paul Thomas",
-      lastname: "Anderson",
-      alive: true,
-      age: 52)
+    seed_kubrick
+    seed_pta
   end
 
   describe "User Story 2" do
@@ -60,17 +40,13 @@ RSpec.describe "Directors Index" do
   describe "User Story 10" do
     describe "User visits '/directors/:id'" do
       it "has a link to that director's movies index page" do
-        director_id = Director.find_by(firstname: @director_1.firstname, 
-                                       lastname: @director_1.lastname).id
-        visit "/directors/#{director_id}"
+        visit "/directors/#{@director_1.id}"
 
-        expect(page).to have_link(href: "/directors/#{director_id}/movies")
+        expect(page).to have_link(href: "/directors/#{@director_1.id}/movies")
 
-        director_id = Director.find_by(firstname: @director_2.firstname, 
-          lastname: @director_2.lastname).id
-        visit "/directors/#{director_id}"
+        visit "/directors/#{@director_2.id}"
 
-        expect(page).to have_link(href: "/directors/#{director_id}/movies")
+        expect(page).to have_link(href: "/directors/#{@director_2.id}/movies")
       end
     end
   end

@@ -1,6 +1,11 @@
 <h1>Movies Index<h1>
-<% @movies.each do |movie| %>
-  <h3><%= "#{movie.title}" %></h3>
+<h3><%= link_to "Sort Alphabetically", "/movies?sort=true" %></h3>
+<hr>
+<% params[:sort] ? movies = @liked_ordered_movies : movies = @liked_movies %>
+<% movies.each do |movie| %>
+  <h4><%= link_to "#{movie.title}", "/movies/#{movie.id}" %></h4>
+  <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
+  <%= link_to "Delete", "/movies/#{movie.id}", method: :delete %>
   <p><%= "Runtime: #{movie.runtime}" %></p>
   <p><%= "Year Released: #{movie.release}" %></p>
   <p><%= "Like: #{movie.like}" %> </p>
