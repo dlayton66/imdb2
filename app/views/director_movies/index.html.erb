@@ -9,6 +9,7 @@
 <hr>
 <% @movies.each do |movie| %>
   <h3><%= "#{movie.title}" %></h3>
+  <%= link_to "Delete", "/movies/#{movie.id}", method: :delete %>
   <p><%= "Runtime: #{movie.runtime}" %></p>
   <p><%= "Year Released: #{movie.release}" %></p>
   <p><%= "Like: #{movie.like}" %> </p>

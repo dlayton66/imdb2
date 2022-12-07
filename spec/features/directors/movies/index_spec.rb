@@ -40,4 +40,17 @@ RSpec.describe "Director Movies Index" do
       expect(page).to_not have_content("2001: A Space Odyssey")
     end
   end
+
+  describe "User Story 23" do
+    it 'adds links to delete movies from movies index' do
+      visit "/directors/#{@director_1.id}/movies"
+      expect(page).to have_link("Delete", href: "/movies/#{@movie_1.id}")
+      expect(page).to have_link("Delete", href: "/movies/#{@movie_3.id}")
+      expect(page).to have_content("#{@movie_1.title}")
+
+      first(:link, 'Delete').click
+
+      expect(page).to_not have_content("#{@movie_1.title}")
+    end
+  end
 end
